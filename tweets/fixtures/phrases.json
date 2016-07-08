@@ -1,0 +1,226 @@
+[
+  {
+    "model": "tweets.phrase",
+    "pk": 1,
+    "fields": {
+      "phrase_text": "home away from home"
+    }
+  },
+  {
+    "model": "tweets.phrase",
+    "pk": 2,
+    "fields": {
+      "phrase_text": "a house is not a home"
+    }
+  },
+  {
+    "model": "tweets.phrase",
+    "pk": 3,
+    "fields": {
+      "phrase_text": "A woman's place is in the home"
+    }
+  },
+  {
+    "model": "tweets.phrase",
+    "pk": 4,
+    "fields": {
+      "phrase_text": "be close to home"
+    }
+  },
+  {
+    "model": "tweets.phrase",
+    "pk": 5,
+    "fields": {
+      "phrase_text": "be home free"
+    }
+  },
+  {
+    "model": "tweets.phrase",
+    "pk": 6,
+    "fields": {
+      "phrase_text": "not much to write home about"
+    }
+  },
+  {
+    "model": "tweets.phrase",
+    "pk": 7,
+    "fields": {
+      "phrase_text": "out of house and home"
+    }
+  },
+  {
+    "model": "tweets.phrase",
+    "pk": 8,
+    "fields": {
+      "phrase_text": "bring home the bacon"
+    }
+  },
+  {
+    "model": "tweets.phrase",
+    "pk": 9,
+    "fields": {
+      "phrase_text": "close to home"
+    }
+  },
+  {
+    "model": "tweets.phrase",
+    "pk": 10,
+    "fields": {
+      "phrase_text": "come home to roost"
+    }
+  },
+  {
+    "model": "tweets.phrase",
+    "pk": 11,
+    "fields": {
+      "phrase_text": "make yourself at home"
+    }
+  },
+  {
+    "model": "tweets.phrase",
+    "pk": 12,
+    "fields": {
+      "phrase_text": "East, west, home's best"
+    }
+  },
+  {
+    "model": "tweets.phrase",
+    "pk": 13,
+    "fields": {
+      "phrase_text": "go home to mama"
+    }
+  },
+  {
+    "model": "tweets.phrase",
+    "pk": 14,
+    "fields": {
+      "phrase_text": "hearth and home"
+    }
+  },
+  {
+    "model": "tweets.phrase",
+    "pk": 15,
+    "fields": {
+      "phrase_text": "home free"
+    }
+  },
+  {
+    "model": "tweets.phrase",
+    "pk": 16,
+    "fields": {
+      "phrase_text": "Home is where the heart is"
+    }
+  },
+  {
+    "model": "tweets.phrase",
+    "pk": 17,
+    "fields": {
+      "phrase_text": "home skillet"
+    }
+  },
+  {
+    "model": "tweets.phrase",
+    "pk": 18,
+    "fields": {
+      "phrase_text": "home sweet home"
+    }
+  },
+  {
+    "model": "tweets.phrase",
+    "pk": 19,
+    "fields": {
+      "phrase_text": "home-brew"
+    }
+  },
+  {
+    "model": "tweets.phrase",
+    "pk": 20,
+    "fields": {
+      "phrase_text": "homeslice"
+    }
+  },
+  {
+    "model": "tweets.phrase",
+    "pk": 21,
+    "fields": {
+      "phrase_text": "in the home stretch"
+    }
+  },
+  {
+    "model": "tweets.phrase",
+    "pk": 22,
+    "fields": {
+      "phrase_text": "keep the home fires burning"
+    }
+  },
+  {
+    "model": "tweets.phrase",
+    "pk": 23,
+    "fields": {
+      "phrase_text": "ladybug ladybug, fly away home"
+    }
+  },
+  {
+    "model": "tweets.phrase",
+    "pk": 24,
+    "fields": {
+      "phrase_text": "make yourself at home"
+    }
+  },
+  {
+    "model": "tweets.phrase",
+    "pk": 25,
+    "fields": {
+      "phrase_text": "man's home is his castle"
+    }
+  },
+  {
+    "model": "tweets.phrase",
+    "pk": 26,
+    "fields": {
+      "phrase_text": "men make houses, women make homes"
+    }
+  },
+  {
+    "model": "tweets.phrase",
+    "pk": 27,
+    "fields": {
+      "phrase_text": "nobody’s home"
+    }
+  },
+  {
+    "model": "tweets.phrase",
+    "pk": 28,
+    "fields": {
+      "phrase_text": "the home stretch"
+    }
+  },
+  {
+    "model": "tweets.phrase",
+    "pk": 29,
+    "fields": {
+      "phrase_text": "lights are on but nobody's home"
+    }
+  },
+  {
+    "model": "tweets.phrase",
+    "pk": 30,
+    "fields": {
+      "phrase_text": "There's no place like home"
+    }
+  },
+  {
+    "model": "tweets.phrase",
+    "pk": 31,
+    "fields": {
+      "phrase_text": "until the cows come home"
+    }
+  },
+  {
+    "model": "tweets.phrase",
+    "pk": 32,
+    "fields": {
+      "phrase_text": "you can't go home again"
+    }
+  }
+]
