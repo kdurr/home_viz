@@ -18,6 +18,9 @@ class Tweet(models.Model):
 
 # class TweetTimeline(models.Model):
 #     date_tweeted = models.DateTimeField('date tweeted')
+#     days_tweets = JSONField()
+#
+#     # {phrase_id: days count}
 #
 #     def __unicode__(self):
 #         return self.phrase_count
