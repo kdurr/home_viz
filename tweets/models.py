@@ -10,7 +10,7 @@ class Phrase(models.Model):
 class Tweet(models.Model):
     phrase = models.ForeignKey(Phrase, on_delete=models.CASCADE)
     tweet_text = models.CharField(max_length=200)
-    tweet_location = models.CharField(max_length=200)
+    tweet_location = models.CharField(max_length=200, default=None, blank=True, null=True)
     tweet_date = models.DateTimeField('date tweeted')
 
     def __unicode__(self):

@@ -19,9 +19,16 @@ def save_tweets(phrase, tweet_data):
     tweet_exists = Tweet.objects.filter(phrase = phrase, tweet_text = tweet_data['text'], tweet_date = formatted_date).exists()
 
     if tweet_exists == False:
+        # NOTE: use user location instead of coordinates? - tweet_data['user']['location']
         Tweet(
             phrase = phrase,
             tweet_text = tweet_data['text'],
-            tweet_location = tweet_data['coordinates'] + ' ' + tweet_data['user']['location'],
+            tweet_location = format_location(tweet_data['coordinates']),
             tweet_date = formatted_date
         ).save()
+
+def format_location(location):
+    if location is None:
+        return ''
+    else:
+        return location

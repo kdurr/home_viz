@@ -7,7 +7,7 @@ from tweets.collect_tweets import collect_tweets
 logger = get_task_logger(__name__)
 
 @periodic_task(
-    run_every=(crontab(minute='*/1')),
+    run_every=(crontab(minute='*/15')),
     name='pull_tweets',
     ignore_result=True
 )
