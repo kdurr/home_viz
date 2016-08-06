@@ -1,4 +1,4 @@
-# from django.contrib.postgres.fields import JSONField
+from django.contrib.postgres.fields import JSONField
 from django.db import models
 
 class Phrase(models.Model):
@@ -16,11 +16,11 @@ class Tweet(models.Model):
     def __unicode__(self):
         return self.tweet_text
 
-# class TweetTimeline(models.Model):
-#     date_tweeted = models.DateTimeField('date tweeted')
-#     days_tweets = JSONField()
-#
-#     # {phrase_id: days count}
-#
-#     def __unicode__(self):
-#         return self.phrase_count
+class TweetTimeline(models.Model):
+    date_tweeted = models.DateTimeField('date tweeted')
+    days_tweets = JSONField()
+
+    # {phrase_id: days count}
+
+    def __unicode__(self):
+        return self.phrase_count
