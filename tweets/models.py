@@ -3,6 +3,7 @@ from django.db import models
 
 class Phrase(models.Model):
     phrase_text = models.CharField(max_length=200)
+    created_at = models.DateTimeField(auto_now=True)
 
     def __unicode__(self):
         return self.phrase_text
@@ -12,6 +13,7 @@ class Tweet(models.Model):
     tweet_text = models.CharField(max_length=200)
     tweet_location = models.CharField(max_length=200, default=None, blank=True, null=True)
     tweet_date = models.DateTimeField('date tweeted')
+    created_at = models.DateTimeField(auto_now=True)
 
     def __unicode__(self):
         return self.tweet_text
@@ -19,8 +21,7 @@ class Tweet(models.Model):
 class TweetTimeline(models.Model):
     date_tweeted = models.DateTimeField('date tweeted')
     days_tweets = JSONField()
-
-    # {phrase_id: days count}
+    created_at = models.DateTimeField(auto_now=True)
 
     def __unicode__(self):
         return self.phrase_count
