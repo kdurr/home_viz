@@ -1,5 +1,4 @@
-from django.db import models
-
+from tweets.models import Phrase, Tweet
 from home_viz import twitter
 
 import time
