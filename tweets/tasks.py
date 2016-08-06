@@ -7,13 +7,14 @@ from tweets.organize_tweets import organize_tweets
 
 logger = get_task_logger(__name__)
 
+# @periodic_task(
+#     run_every=(crontab(minute='*/15')),
+#     name='pull_tweets',
+#     ignore_result=True
+# )
 @periodic_task(
-    run_every=(crontab(minute='*/15')),
-    name='pull_tweets',
-    ignore_result=True
-)
-@periodic_task(
-    run_every=(crontab(hour='24')),
+    # run_every=(crontab(hour='24')),
+    run_every=(crontab(minute='*/1')),
     name='create_tweet_timeline',
     ignore_result=True
 )

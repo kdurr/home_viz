@@ -1,15 +1,23 @@
 from tweets.models import Phrase, Tweet
 
+import datetime
+import json
+
 def organize_tweets():
-    # find tweets from within today's date
-    # tweet.tweet_date
-    # {phrase_id: days count}
+    today = datetime.date.today()
+    yesterday = datetime.date.today() - datetime.timedelta(days=1)
 
+    tweets = Tweet.objects.filter(tweet_date__range=[yesterday, today])
     tweet_list = {}
-    tweets = some query for today's tweets
+
     for tweet in tweets:
+        key = tweet.phrase.id
+        if key in tweet_list:
+            tweet_list[key] += 1
+        else:
+            tweet_list[key] = 1
 
-
+    save_timeline(datetime.date.now(), json.dumps(tweet_list))
 
 def save_timeline(day, tweet_list):
     TweetTimeline(
