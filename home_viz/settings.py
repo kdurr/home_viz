@@ -96,6 +96,9 @@ TWITTER_SECRET_TOKEN = 'gOmJhxgRzkrzXq2uk4ONpDE5IbzGORXjLgCbE1Ngj96AX'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
+STATIC_ROOT = 'staticfiles'
+STATIC_URL = '/static/'
+STATICFILES_DIRS = (os.path.join(BASE_DIR, '../tweets/static'),)
 
 # Celery Credentials
 BROKER_URL = 'redis://localhost:6379'
@@ -104,5 +107,3 @@ CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
 CELERY_TIMEZONE = 'UTC'
-
-STATIC_URL = '/static/'
