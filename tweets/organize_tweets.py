@@ -1,4 +1,4 @@
-from tweets.models import Phrase, Tweet
+from tweets.models import Phrase, Tweet, TweetTimeline
 
 import datetime
 import json
@@ -17,7 +17,8 @@ def organize_tweets():
         else:
             tweet_list[key] = 1
 
-    save_timeline(datetime.date.now(), json.dumps(tweet_list))
+    print(tweet_list)
+    save_timeline(datetime.datetime.now(), json.dumps(tweet_list))
 
 def save_timeline(day, tweet_list):
     TweetTimeline(
