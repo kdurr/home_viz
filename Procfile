@@ -1,2 +1,2 @@
 web: gunicorn home_viz.wsgi --log-file -
-worker: celery worker --app=tasks.app
+worker: celery worker --app=home_viz.app
