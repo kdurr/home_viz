@@ -12,8 +12,8 @@ app = Celery('home_viz')
 app.config_from_object('django.conf:settings')
 app.autodiscover_tasks(lambda: settings.INSTALLED_APPS)
 app.conf.update(
-    BROKER_URL=os.environ.get('REDIS_URL'),
-    CELERY_RESULT_BACKEND=os.environ.get('REDIS_URL')
+    BROKER_URL=os.environ['REDIS_URL'],
+    CELERY_RESULT_BACKEND=os.environ['REDIS_URL']
 )
 
 
