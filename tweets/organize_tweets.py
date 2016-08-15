@@ -5,9 +5,10 @@ import json
 
 def organize_tweets():
     today = datetime.date.today()
-    yesterday = datetime.date.today() - datetime.timedelta(days=1)
+    today_min = datetime.datetime.combine(today, datetime.time.min)
+    today_max = datetime.datetime.combine(today, datetime.time.max)
 
-    tweets = Tweet.objects.filter(tweet_date__range=[yesterday, today])
+    tweets = Tweet.objects.filter(tweet_date__range=(today_min, today_max))
     tweet_list = {}
 
     for tweet in tweets:
@@ -17,7 +18,6 @@ def organize_tweets():
         else:
             tweet_list[key] = 1
 
-    print(tweet_list)
     save_timeline(datetime.datetime.now(), json.dumps(tweet_list))
 
 def save_timeline(day, tweet_list):

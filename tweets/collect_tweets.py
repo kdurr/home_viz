@@ -10,6 +10,7 @@ def collect_tweets():
 
     for phrase in phrases:
         query = '"' + phrase.phrase_text + '"' + " -filter:retweets AND -filter:replies"
+        # add the since id here
         search_results = twitter.search(q=query, count=100)
         phrase_results = search_results['statuses']
         for result in phrase_results:
