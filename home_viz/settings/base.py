@@ -1,5 +1,6 @@
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+import dj_database_url
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -92,7 +93,6 @@ TWITTER_APP_KEY = 'NELO3vTdiseeZBqvarS6ETbgL'
 TWITTER_APP_SECRET = '30WyVSqCwWcjNoq17JbV9aIJNEC2Z0ky4JuNd5pUAlg503gROy'
 TWITTER_ACCESS_TOKEN = '425475604-qMXavMUhFrU66vYJcCvivKHX82vqMnUnGkkBReqZ'
 TWITTER_SECRET_TOKEN = 'gOmJhxgRzkrzXq2uk4ONpDE5IbzGORXjLgCbE1Ngj96AX'
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/

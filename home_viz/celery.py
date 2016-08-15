@@ -4,6 +4,7 @@ from celery import Celery
 from django.conf import settings
 
 # set the default Django settings module for the 'celery' program.
+# print(settings.configured)
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'home_viz.settings')
 app = Celery('home_viz')
 
@@ -12,8 +13,8 @@ app = Celery('home_viz')
 app.config_from_object('django.conf:settings')
 app.autodiscover_tasks(lambda: settings.INSTALLED_APPS)
 app.conf.update(
-    BROKER_URL=os.environ['REDIS_URL'],
-    CELERY_RESULT_BACKEND=os.environ['REDIS_URL']
+    BROKER_URL=os.environ.get('REDIS_URL', 'redis://h:p65vojovl8j0dr9ivctfqdemq3f@ec2-54-163-236-211.compute-1.amazonaws.com:12239'),
+    CELERY_RESULT_BACKEND=os.environ.get('REDIS_URL', 'redis://h:p65vojovl8j0dr9ivctfqdemq3f@ec2-54-163-236-211.compute-1.amazonaws.com:12239')
 )
 
 
