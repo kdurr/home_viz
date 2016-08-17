@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import *
 import ast
+import json
 
 def index(request):
     phrases = Phrase.objects.all()
@@ -19,4 +20,4 @@ def index(request):
         daily_tweets[timeline.date_tweeted] = timeline_list
 
 
-    return HttpResponse(daily_tweets, content_type='application/json')
+    return HttpResponse(json.dumps(daily_tweets), content_type='application/json')
