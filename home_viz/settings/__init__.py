@@ -2,7 +2,7 @@ from __future__ import absolute_import
 from .production import *
 # from .local import *
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [".herokuapp.com"]
 
