@@ -1,7 +1,8 @@
 from __future__ import absolute_import
-from .production import *
+# from .production import *
+from .local import *
 
-DEBUG = False
+# DEBUG = False
 
 ##### DJANGO SECRETS
 # SECRET_KEY = '(3gd6shenud@&57...'
