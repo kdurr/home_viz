@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import *
+import ast
 
 def index(request):
     phrases = Phrase.objects.all()
@@ -10,7 +11,8 @@ def index(request):
 
     for timeline in tweet_timeline:
         timeline_list = {}
-        for phrase, count in timeline.days_tweets:
+        days_tweets = ast.literal_eval(timeline.days_tweets)
+        for phrase, count in days_tweets:
             text = Phrase.objects.filter(id=int(phrase)).first().phrase_text
             timeline_list[text] = count
 
