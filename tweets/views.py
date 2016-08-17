@@ -10,7 +10,7 @@ def index(request):
 
     for timeline in tweet_timeline:
         timeline_list = {}
-        for phrase, count in timeline.days_tweets.iteritems():
+        for phrase, count in timeline.days_tweets:
             text = Phrase.objects.filter(id=int(phrase)).first().phrase_text
             timeline_list[text] = count
 
