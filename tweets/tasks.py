@@ -19,7 +19,7 @@ def task_pull_tweets():
     logger.info("Pinged Twitter")
 
 @periodic_task(
-    run_every=(crontab(minute=59, hour=23)),
+    run_every=(crontab(minute=15, hour=0)),
     name='create_tweet_timeline',
     ignore_result=True
 )
