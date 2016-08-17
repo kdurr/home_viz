@@ -17,7 +17,8 @@ def index(request):
             text = Phrase.objects.filter(id=int(phrase_id)).first().phrase_text
             timeline_list[text] = days_tweets[phrase_id]
 
-        daily_tweets[timeline.date_tweeted] = timeline_list
+        date_tweeted = timeline.date_tweeted.strftime('%m-%d-%Y')
+        daily_tweets[date_tweeted] = timeline_list
 
 
     return HttpResponse(json.dumps(daily_tweets), content_type='application/json')
