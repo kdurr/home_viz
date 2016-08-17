@@ -4,6 +4,8 @@ from .production import *
 
 DEBUG = False
 
+ALLOWED_HOSTS = [".herokuapp.com"]
+
 ##### DJANGO SECRETS
 # SECRET_KEY = '(3gd6shenud@&57...'
 # DATABASES['default']['PASSWORD'] = 'f9kGH...'
