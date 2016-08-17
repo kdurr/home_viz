@@ -12,9 +12,9 @@ def index(request):
     for timeline in tweet_timeline:
         timeline_list = {}
         days_tweets = ast.literal_eval(timeline.days_tweets)
-        for phrase, count in days_tweets:
-            text = Phrase.objects.filter(id=int(phrase)).first().phrase_text
-            timeline_list[text] = count
+        for phrase_id in days_tweets:
+            text = Phrase.objects.filter(id=int(phrase_id)).first().phrase_text
+            timeline_list[text] = days_tweets[phrase_id]
 
         daily_tweets[timeline.date_tweeted] = timeline_list
 
